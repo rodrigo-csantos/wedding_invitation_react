@@ -4,10 +4,10 @@ interface props {
     state: string
 }
 
-function CardFront (props: props): JSX.Element {
+function CardFront ({ state }: props): JSX.Element {
     return (
         <>
-            <div className={props.state} id="cardFront">
+            <div className={state} id="cardFront">
                 <div className="imgLogo">
                     <img className="logoKR" src="/rodrigo_karina-brasao.png" alt="Brasão Rodrigo e Karina" />
                 </div>

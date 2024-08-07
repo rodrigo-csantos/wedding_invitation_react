@@ -6,10 +6,10 @@ interface props {
     state: string
 }
 
-function WeddingCard (props: props): JSX.Element {
+function WeddingCard ({ state }: props): JSX.Element {
     return (
        <div className="weddingCard">
-            <CardFront state={props.state}/>
+            <CardFront state={state}/>
             <CardInside/>
        </div>
     )
