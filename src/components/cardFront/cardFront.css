@@ -1,0 +1,29 @@
+.Open {
+    --transformCardFront: none;
+    --displayImg: flex;
+}
+
+.Close {
+    --transformCardFront: rotateX(160deg);
+    --displayImg: none;
+}
+
+#cardFront {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(../../assets/background-lavanda.png);
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    transform-origin: top;
+    transform: var(--transformCardFront);
+    box-shadow: inset 20px 10px 90px rgba(0,0,0,.13), 20px 0 40px rgba(0,0,0,0.1);
+    transition: .6s;
+    border-radius: 3px;
+}
+
+.logoKR {
+    display: var(--displayImg); 
+}

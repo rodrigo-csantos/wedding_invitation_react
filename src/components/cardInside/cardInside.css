@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'LuxuriousScript';
+    src: url(/fonts/LuxuriousScript-Regular.ttf);
+}
+
+.cardInside {
+    position: absolute;
+    background-image: url(../../assets/background-lavanda.png);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 600px;
+    height:400px;
+    z-index:-1;
+    left:0;
+    top:0;
+    box-shadow: inset 20px 5px 90px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+}
+
+p.verse {
+    margin: 50px auto 2px auto;
+    width: 400px;
+    text-align: center;
+}
+  
+h1 {
+    margin: 50px auto 5px auto;
+    font-family: 'LuxuriousScript', sans-serif;
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.textInvite {
+    margin: 4px auto 0 auto;
+    font-size: 14.5px;
+}
+
+.dataHorario {
+    margin: 25px auto 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+  
+.dateInvite {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+  
+#dateweek {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+  
+#dateHour {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+}
+  
+.separador {
+    background-color: black;
+    width: 1px;
+    height: 45px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+  
+#s1 {
+    margin-right: 10px;
+}
+  
+#s2 {
+    margin-left: 10px;
+}
+  
+.dateMes {
+    font-size: 18px;  
+    margin-bottom: 7px; 
+}
+  
+.dateDia {
+    font-size: 40px;
+}
+  
+.dateAno {
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+.place {
+    font-size: 15px;
+}
+
+p.rest {
+    margin: 0;
+}

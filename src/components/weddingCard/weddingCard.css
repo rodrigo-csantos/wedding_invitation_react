@@ -1,0 +1,8 @@
+.weddingCard {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 4s;
+}
