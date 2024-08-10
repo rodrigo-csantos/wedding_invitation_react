@@ -2,7 +2,7 @@ import WeddingCard from "../../components/weddingCard"
 import Countdown from "../../components/countdown/Countdown"
 import { useState } from "react"
 import './home.css'
-import Button from "../../components/Button/Button"
+import Button from "../../components/Button"
 import imagePaths from "../../assets/imagePaths"
 
 function Home (): JSX.Element  {
