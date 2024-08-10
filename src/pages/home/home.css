@@ -12,3 +12,13 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
   cursor: pointer;
 }
+
+#button-links {
+  display: flex;
+  position: relative;
+  top: 25px;
+  justify-content: center;
+  padding: 45px 0;
+  font-size: 15px;
+  gap: 35px;
+}

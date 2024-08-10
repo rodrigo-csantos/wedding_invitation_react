@@ -2,7 +2,7 @@ interface prop {
     showComponent: boolean
 }
 
-function Countdown ({showComponent}: prop) {
+function Countdown ({showComponent}: prop): JSX.Element {
     return (
         <> 
             {showComponent && (<h1>Teste</h1>)}

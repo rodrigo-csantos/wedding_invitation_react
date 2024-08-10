@@ -1,0 +1,31 @@
+#bts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+  
+#bts:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.img-back {
+    position: relative;
+}
+  
+.imgBk {
+    width: 90px;
+    height: 90px;
+}
+  
+.imgLinks {
+    position: absolute;
+    z-index: 1;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.582);
+    border: 1px solid rgba(0, 0, 0, 0.35);
+}
