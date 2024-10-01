@@ -1,5 +1,3 @@
-// src/assets/imagePaths.ts
-// Primeiro, importe as imagens
 import img1Button1 from './2-removebk.png'
 import img2Button1 from './icone-local.png'
 import img1Button2 from './1-removebk.png'
@@ -7,7 +5,6 @@ import img2Button2 from './icone-whats.png'
 import img1Button3 from './3-removebk.png'
 import img2Button3 from './icone-presente.png'
 
-// Depois, exporte os caminhos como um objeto
 const imagePaths = {
     button1: {
         img1: img1Button1,

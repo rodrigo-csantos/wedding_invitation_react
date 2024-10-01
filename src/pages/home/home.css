@@ -1,5 +1,18 @@
+:root {
+  --heightBody: 100vh;
+}
+
+.clicked {
+  --heightBody: 250vh;
+}
+
+body {
+  height: var(--heightBody);
+}
+
 .button {
   margin-top: 35px;
+  
 }
   
 .click {

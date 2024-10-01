@@ -20,8 +20,11 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  background-image: url(../src/assets/back-lilas-1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 

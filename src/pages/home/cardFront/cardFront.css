@@ -1,11 +1,13 @@
 .Open {
     --transformCardFront: none;
     --displayImg: flex;
+    --heightCardFront: 400px;
 }
 
 .Close {
     --transformCardFront: rotateX(160deg);
     --displayImg: none;
+    --heightCardFront: 350px;
 }
 
 #cardFront {
@@ -13,9 +15,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url(../../assets/background-lavanda.png);
+    background-image: url(../../../assets/background-lavanda.png);
     width: 600px;
-    height: 400px;
+    height: var(--heightCardFront);
     overflow: hidden;
     transform-origin: top;
     transform: var(--transformCardFront);
