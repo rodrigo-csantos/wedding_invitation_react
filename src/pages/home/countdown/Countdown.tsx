@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react"
 import './countdown.css'
+import { showProp } from "../../../interfaces/interface"
 
-interface prop {
-    showComponent: boolean
-}
-
-function Countdown ({showComponent}: prop): JSX.Element {
+function Countdown ({showComponent}: showProp): JSX.Element {
 
     const [timeLeft, setTimeLeft] = useState({
         days: 0,

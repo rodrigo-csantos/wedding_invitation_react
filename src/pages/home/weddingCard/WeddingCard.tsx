@@ -1,12 +1,11 @@
 import CardFront from "../cardFront"
 import CardInside from "../cardInside"
 import './weddingCard.css'
+import { stateProp } from "../../../interfaces/interface"
 
-interface props {
-    state: string
-}
 
-function WeddingCard ({ state }: props): JSX.Element {
+
+function WeddingCard ({ state }: stateProp): JSX.Element {
     return (
        <div className="weddingCard">
             <CardFront state={state}/>

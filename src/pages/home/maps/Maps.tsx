@@ -1,11 +1,8 @@
 import { useRef } from 'react'
 import './maps.css'
+import { showProp } from '../../../interfaces/interface'
 
-interface prop {
-    showComponent: boolean
-}
-
-function Maps ({showComponent}: prop): JSX.Element {
+function Maps ({showComponent}: showProp): JSX.Element {
 
     const iframeProps = {
         style: {border: 0},

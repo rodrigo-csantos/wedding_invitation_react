@@ -1,10 +1,7 @@
 import './cardFront.css'
+import { stateProp } from '../../../interfaces/interface'
 
-interface props {
-    state: string
-}
-
-function CardFront ({ state }: props): JSX.Element {
+function CardFront ({ state }: stateProp): JSX.Element {
     return (
         <>
             <div className={state} id="cardFront">
