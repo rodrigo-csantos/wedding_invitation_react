@@ -11,6 +11,20 @@ function Home (): JSX.Element  {
     const [opening, setOpening] = useState('Open')
     const [show, setShow] = useState(false)
 
+    function handleChangeHeight () {
+        document.documentElement.classList.toggle('clicked')
+    }
+
+    function handleScrollToMap(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void {
+        event.preventDefault()
+        const element = document.getElementById('maps');
+  
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+    }
+
     useEffect(() => {
         document.documentElement.classList.toggle('clicked')
     }, [opening])
@@ -19,11 +33,13 @@ function Home (): JSX.Element  {
         <>
            <WeddingCard state={opening}/>
            <div className="button">
-                <button onClick={() => {opening === 'Close' ? (setOpening('Open'), setShow(false)) : (setOpening('Close'), setShow(true))}} id="botao" 
+                <button onClick={() => {
+                    opening === 'Close' ? (setOpening('Open'), setShow(false)) : (setOpening('Close'), setShow(true))
+                }} id="botao" 
                 className="click">{opening}</button>
            </div>
            <div id="button-links">
-                <a href="#maps">
+                <a href="" onClick={handleScrollToMap}>
                     <Button img1={imagePaths.button1.img1} img2={imagePaths.button1.img2} alt1="Texto: Local da Recepção" alt2="ícone de localização" showComponent={show}/>
                 </a>
 
@@ -31,7 +47,7 @@ function Home (): JSX.Element  {
                     <Button img1={imagePaths.button2.img1} img2={imagePaths.button2.img2} alt1="Texto: Confirmar preseça" alt2="ícone do whatsapp" showComponent={show}/>
                 </a>
                 
-                < Link to={'/gifts'}>
+                < Link to={'/gifts'} onClick={handleChangeHeight}>
                     <Button img1={imagePaths.button3.img1} img2={imagePaths.button3.img2} alt1="Texto: Lista de presentes" alt2="ícone de presentes" showComponent={show}/>
                 </Link>
            </div>
