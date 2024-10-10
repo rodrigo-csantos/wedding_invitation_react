@@ -13,6 +13,7 @@ function Home (): JSX.Element  {
 
     function handleChangeHeight () {
         document.documentElement.classList.toggle('clicked')
+        window.scrollTo(0, 0);
     }
 
     function handleScrollToMap(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void {
@@ -38,7 +39,7 @@ function Home (): JSX.Element  {
                 }} id="botao" 
                 className="click">{opening}</button>
            </div>
-           <div id="button-links">
+           { show && <div id="button-links">
                 <a href="" onClick={handleScrollToMap}>
                     <Button img1={imagePaths.button1.img1} img2={imagePaths.button1.img2} alt1="Texto: Local da Recepção" alt2="ícone de localização" showComponent={show}/>
                 </a>
@@ -50,7 +51,7 @@ function Home (): JSX.Element  {
                 < Link to={'/gifts'} onClick={handleChangeHeight}>
                     <Button img1={imagePaths.button3.img1} img2={imagePaths.button3.img2} alt1="Texto: Lista de presentes" alt2="ícone de presentes" showComponent={show}/>
                 </Link>
-           </div>
+           </div>}
            <Countdown showComponent={show} />
            <Maps showComponent={show} />
         </>     

@@ -13,3 +13,26 @@ export interface stateProp {
 export interface showProp {
     showComponent: boolean
 }
+
+export interface DialogProps {
+    isOpen: boolean;
+    onClose: () => void;
+    variant: "A" | "B"; 
+    imgSrc?: string; 
+    linkHref?: string; 
+    inputValue?: string; 
+    onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onConfirm?: () => void; 
+    className?: string
+  }
+
+export interface GiftsProps {
+    imgSrc: string;
+    textContent: string
+    variant: "A" | "B";
+    linkHref?: string;
+    inputValue?: string; 
+    onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onConfirm?: () => void;
+    className?: string
+}

@@ -7,7 +7,7 @@
 .Close {
     --transformCardFront: rotateX(160deg);
     --displayImg: none;
-    --heightCardFront: 350px;
+    --heightCardFront: 330px;
 }
 
 #cardFront {
