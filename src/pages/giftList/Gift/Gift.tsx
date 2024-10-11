@@ -1,19 +1,26 @@
 import './gift.css'
 import Dialog from "../Dialog"
-import { useState } from "react"
 import { GiftsProps } from "../../../interfaces/interface"
+import { useRef } from 'react'
 
-function Gift ({imgSrc, textContent, variant, linkHref, className}: GiftsProps): JSX.Element {
-
-    const [dialogOpen, setDialogOpen] = useState<boolean>(false)
+function Gift ({imgSrc, textContent, variant, linkHref}: GiftsProps): JSX.Element {
+    const giftRef = useRef<{ open: () => void; close: () => void } | null>(null);
+    
+    const handleOpenModal = () => {
+        giftRef.current?.open(); 
+    };
+    
+    const handleCloseModal = () => {
+        giftRef.current?.close(); 
+    };
 
     return (
         <>
             <li>
                 <img className="gift-image" src={imgSrc} alt={textContent} />
                 <span>{textContent}</span>
-                <button onClick={() => {setDialogOpen(true)}} className="select">Selecionar</button>
-                <Dialog isOpen={dialogOpen} imgSrc={imgSrc} variant={variant} linkHref={linkHref} onClose={() => {setDialogOpen(false)}} className={className}/>
+                <button onClick={handleOpenModal} className="select">Selecionar</button>
+                <Dialog ref={giftRef} imgSrc={imgSrc} variant={variant} linkHref={linkHref} onClose={handleCloseModal}/>
             </li>
         </>
     )

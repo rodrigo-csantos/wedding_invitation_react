@@ -29,21 +29,11 @@
     background:rgba(227, 192, 246, 0.1);
 }
 
-dialog::backdrop{
-    background-color: rgb(0 0 0 /.5);
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 dialog.gift-dialog {
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.582);
-    width: 500px;
-    backdrop-filter: blur(10px);
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    background-image: url(../../../assets/details-flowers.png);
-    background-size: cover;
-}
-
-dialog.gift-dialog2 {
     border-radius: 5px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.582);
     width: 500px;

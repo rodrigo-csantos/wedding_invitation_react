@@ -1,11 +1,25 @@
 import './dialog.css'
 import { DialogProps } from '../../../interfaces/interface'
+import { useRef, forwardRef, useImperativeHandle } from 'react'
 
-function Dialog ({isOpen, variant, imgSrc, linkHref, onClose, onConfirm, className}: DialogProps): JSX.Element | null{
-    if (!isOpen) return null
+const Dialog = forwardRef(({ variant, imgSrc, linkHref, onClose, onConfirm}: DialogProps, ref) => {
+    const dialogRef = useRef<HTMLDialogElement | null>(null)
+
+    useImperativeHandle(ref, () => ({
+        open: () => {
+            if (dialogRef.current) {
+              dialogRef.current.showModal();
+            }
+        },
+        close: () => {
+            if (dialogRef.current) {
+              dialogRef.current.close();
+            }
+        },
+    }));
 
     return (
-        <dialog className={className} open={isOpen}>
+        <dialog className='gift-dialog' ref={dialogRef}>
             {variant === "A" && (
                 <>
                     <img className='gift-image2' src={imgSrc} />
@@ -26,6 +40,6 @@ function Dialog ({isOpen, variant, imgSrc, linkHref, onClose, onConfirm, classNa
             )}
         </dialog>
     )
-}
+})
 
 export default Dialog

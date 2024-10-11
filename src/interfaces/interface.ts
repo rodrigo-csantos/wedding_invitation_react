@@ -15,15 +15,13 @@ export interface showProp {
 }
 
 export interface DialogProps {
-    isOpen: boolean;
     onClose: () => void;
     variant: "A" | "B"; 
     imgSrc?: string; 
     linkHref?: string; 
     inputValue?: string; 
     onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    onConfirm?: () => void; 
-    className?: string
+    onConfirm?: () => void;
   }
 
 export interface GiftsProps {
@@ -34,5 +32,4 @@ export interface GiftsProps {
     inputValue?: string; 
     onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onConfirm?: () => void;
-    className?: string
 }
