@@ -1,23 +1,9 @@
 import './dialog.css'
 import { DialogProps } from '../../../interfaces/interface'
-import { useRef, forwardRef, useImperativeHandle } from 'react'
+import { forwardRef } from 'react'
 
-const Dialog = forwardRef(({ variant, imgSrc, linkHref, onClose, onConfirm}: DialogProps, ref) => {
-    const dialogRef = useRef<HTMLDialogElement | null>(null)
-
-    useImperativeHandle(ref, () => ({
-        open: () => {
-            if (dialogRef.current) {
-              dialogRef.current.showModal();
-            }
-        },
-        close: () => {
-            if (dialogRef.current) {
-              dialogRef.current.close();
-            }
-        },
-    }));
-
+const Dialog = forwardRef<HTMLDialogElement, DialogProps>(({ variant, imgSrc, linkHref, onClose, onConfirm}, dialogRef) => {
+   
     return (
         <dialog className='gift-dialog' ref={dialogRef}>
             {variant === "A" && (
