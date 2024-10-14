@@ -1,8 +1,26 @@
 import './giftPage.css'
-import giftImagesPaths from '../../assets/giftImages/giftImagesPaths'
+import {giftImagesPaths, renderGift} from '../../assets/giftImages/giftImagesPaths'
 import Gift from './Gift'
+import {useEffect, useState } from 'react'
+import { giftListProps } from '../../interfaces/interface'
 
 function GiftPage (): JSX.Element {
+
+    const [gifts, setGifts] = useState([])
+
+    useEffect(() => {
+        async function getGifts () {
+            try {
+                const response = await fetch('https://api.rodrigoekarina.com.br/gifts')
+                const dataResponse = await response.json()
+                setGifts(dataResponse)
+            } catch (error) {
+                console.error(`Erro ao obter presentes: ${error}`)
+            }
+        }
+        getGifts()
+        
+    }, [])
 
     return (
         <div id='giftPage'>
@@ -31,6 +49,16 @@ function GiftPage (): JSX.Element {
 
                     <Gift imgSrc={giftImagesPaths.imgPix.passagem_aerea} textContent='Passagens aéreas - R$ 250,00' variant='A' linkHref='https://nubank.com.br/cobrar/1dn1q2/6695661e-ecbe-4aac-bcda-eb080d178407' />
                     
+                    {gifts.length > 0 && gifts.map((gift: giftListProps, index) => {                      
+                        
+                        return (<Gift 
+                            key= {index}
+                            imgSrc={renderGift(gift.idImage)}
+                            textContent={gift.giftName}
+                            variant='B'
+                        />)
+                        
+                    })}
                 </ul>
             </div>
         </div>

@@ -22,14 +22,22 @@ export interface DialogProps {
     inputValue?: string; 
     onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onConfirm?: () => void;
-  }
+}
 
 export interface GiftsProps {
-    imgSrc: string;
+    imgSrc: string | undefined;
     textContent: string
     variant: "A" | "B";
     linkHref?: string;
     inputValue?: string; 
     onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     onConfirm?: () => void;
+}
+
+export interface giftListProps {
+    giftGiver: string
+    giftName: string
+    idGift: number
+    idImage: number
+    selected: boolean
 }
