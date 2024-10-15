@@ -19,9 +19,7 @@ export interface DialogProps {
     variant: "A" | "B"; 
     imgSrc?: string; 
     linkHref?: string; 
-    inputValue?: string; 
-    onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    onConfirm?: () => void;
+    idGift?: number
 }
 
 export interface GiftsProps {
@@ -29,9 +27,8 @@ export interface GiftsProps {
     textContent: string
     variant: "A" | "B";
     linkHref?: string;
-    inputValue?: string; 
-    onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    onConfirm?: () => void;
+    idGift?: number
+    selectedGift?: boolean
 }
 
 export interface giftListProps {

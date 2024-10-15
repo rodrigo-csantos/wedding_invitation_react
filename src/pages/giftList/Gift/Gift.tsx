@@ -3,7 +3,7 @@ import Dialog from "../Dialog"
 import { GiftsProps } from "../../../interfaces/interface"
 import { useRef } from 'react'
 
-function Gift ({imgSrc, textContent, variant, linkHref}: GiftsProps): JSX.Element {
+function Gift ({imgSrc, textContent, variant, linkHref, idGift, selectedGift}: GiftsProps): JSX.Element {
     const dialogRef = useRef<HTMLDialogElement | null>(null);
     
     const handleOpenModal = () => {
@@ -18,27 +18,12 @@ function Gift ({imgSrc, textContent, variant, linkHref}: GiftsProps): JSX.Elemen
         <>
             <li>
                 <img className="gift-image" src={imgSrc} alt={textContent} />
-                <span>{textContent}</span>
-                <button onClick={handleOpenModal} className="select">Selecionar</button>
-                <Dialog ref={dialogRef} imgSrc={imgSrc} variant={variant} linkHref={linkHref} onClose={handleCloseModal}/>
+                <span className={selectedGift ? 'selected-gift' : undefined}>{textContent}</span>
+                {!selectedGift && (<button onClick={handleOpenModal} className="select">Selecionar</button>)}
+                <Dialog ref={dialogRef} imgSrc={imgSrc} variant={variant} linkHref={linkHref} onClose={handleCloseModal} idGift={idGift}/>
             </li>
         </>
     )
 }
 
 export default Gift
-
- // const dialogRef = useRef<HTMLDialogElement | null>(null)dialogRef
-
-    // useImperativeHandle(giftRef, () => ({
-    //     open: () => {
-            // if (dialogRef.current) {
-            //   dialogRef.current.showModal();
-            // }
-    //     },
-    //     close: () => {
-    //         if (dialogRef.current) {
-    //           dialogRef.current.close();
-    //         }
-    //     },
-    // }));

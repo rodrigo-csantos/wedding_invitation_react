@@ -42,3 +42,8 @@ dialog.gift-dialog {
     background-image: url(../../../assets/details-flowers.png);
     background-size: cover;
 }
+
+.pInvalid {
+    margin: 2px auto 10px auto;
+    color: rgb(230, 108, 108);
+}
