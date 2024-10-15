@@ -44,11 +44,8 @@ const Dialog = forwardRef<HTMLDialogElement, DialogProps>(({ variant, imgSrc, li
             return null
         } finally {
             setIsSubmitting(false) 
+            window.location.reload()
         }
-        
-
-        
-        
     }
 
     return (
