@@ -80,3 +80,28 @@ dialog.gift-dialog2 {
         height: 70%; 
     }
 }
+
+@media screen and (max-width: 800px) {
+    .fixed-bg {
+        background-image: url(../../assets/back-lilas-3.jpg);
+    }
+
+    #h1Lista {
+        font-size: 55px;
+    }
+
+    .introducao {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    li {
+
+        width: 100%;
+    }
+
+    #gift-list {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -7,7 +7,7 @@ export interface imagesProps {
 }
 
 export interface stateProp {
-    state: string
+    state: boolean
 }
 
 export interface showProp {
@@ -37,4 +37,11 @@ export interface giftListProps {
     idGift: number
     idImage: number
     selected: boolean
+}
+
+export const iframeProps = {
+    style: {border: 0},
+    allowFullScreen: true, 
+    loading: "lazy" as const,
+    referrerPolicy: "no-referrer-when-downgrade" as const,
 }

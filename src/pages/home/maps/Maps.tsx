@@ -1,19 +1,14 @@
 import { useRef } from 'react'
 import './maps.css'
 import { showProp } from '../../../interfaces/interface'
+import { iframeProps } from '../../../interfaces/interface'
 
 function Maps ({showComponent}: showProp): JSX.Element {
-
-    const iframeProps = {
-        style: {border: 0},
-        allowFullScreen: true, 
-        loading: "lazy" as "lazy",
-        referrerPolicy: "no-referrer-when-downgrade" as "no-referrer-when-downgrade",
-    }
 
     const textRef = useRef<HTMLHeadingElement>(null)
 
     const copiarTexto = () => {
+
         if (textRef.current) {
             const texto = textRef.current.innerText
             navigator.clipboard.writeText(texto)
