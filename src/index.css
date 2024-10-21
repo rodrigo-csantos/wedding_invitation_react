@@ -8,25 +8,31 @@
   line-height: 1;
   font-weight: 400;
   --heightBody: 100vh;
+  --heightBody2: 100vh;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --breakPoint-size: 680px;
 }
 
 .clicked {
   --heightBody: 270vh;
+  --heightBody2: 200vh;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  background-image: url(../src/assets/back-lilas-1.jpeg);
+  background-image: url(./assets/back-lilas-1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-width: 320px;
   min-height: var(--heightBody);
+  @media screen and (max-width: 680px) {
+    background-image: url(./assets/back-lilas-2.jpeg);
+    min-height: var(--heightBody2);
+  }
 }
-
 

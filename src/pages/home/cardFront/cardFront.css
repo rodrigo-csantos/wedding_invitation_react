@@ -2,12 +2,14 @@
     --transformCardFront: none;
     --displayImg: flex;
     --heightCardFront: 400px;
+    --heightCardFront2: 232px;
 }
 
 .Close {
     --transformCardFront: rotateX(160deg);
     --displayImg: none;
     --heightCardFront: 330px;
+    --heightCardFront2: 225px;
 }
 
 #cardFront {
@@ -24,8 +26,17 @@
     box-shadow: inset 20px 10px 90px rgba(0,0,0,.13), 20px 0 40px rgba(0,0,0,0.1);
     transition: .6s;
     border-radius: 3px;
+    @media screen and (max-width: 680px) {
+        width: 360px;
+        height: var(--heightCardFront2);
+        background-size: 100% 100%;
+    }
 }
 
 .logoKR {
     display: var(--displayImg); 
+    @media screen and (max-width: 680px) {
+        width: 300px;
+        height: 300px;
+    }
 }
