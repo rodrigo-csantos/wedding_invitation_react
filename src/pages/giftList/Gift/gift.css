@@ -5,7 +5,7 @@
 }
 
 li {
-    width: 480px;
+    width: 430px;
     margin: 10px 3px;
     padding: 5px 2px;
     list-style: none;
@@ -19,6 +19,12 @@ li {
     border-radius: 5px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.325);
     font-size: 14px;
+    @media screen and (min-width: 1064px) {
+       height: 270px;
+    }
+    @media screen and (max-width: 768px) {
+       width: 90%;
+    }
 }
 
 .gift-image {
@@ -26,6 +32,9 @@ li {
     margin-bottom: 18px; 
     margin-top: 6px;
     border-radius: 5px;
+    @media screen and (min-width: 1064px) {
+        height: 70%;
+    }
 }
 
 .select {
