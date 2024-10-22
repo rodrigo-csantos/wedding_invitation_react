@@ -23,7 +23,7 @@ li {
        height: 270px;
     }
     @media screen and (max-width: 768px) {
-       width: 90%;
+       width: 100%;
     }
 }
 
