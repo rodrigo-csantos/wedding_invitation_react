@@ -30,7 +30,7 @@ body {
   background-attachment: fixed;
   min-width: 320px;
   min-height: var(--heightBody);
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 768px) {
     background-image: url(./assets/back-lilas-2.jpeg);
     min-height: var(--heightBody2);
   }

@@ -18,7 +18,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: 3px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         width: 360px;
         height:232px;
         background-size: 100% 100%;
@@ -29,7 +29,7 @@ p.verse {
     margin: 50px auto 2px auto;
     width: 400px;
     text-align: center;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         width: 250px;
         font-size: 10.5px;
         margin: 25px auto 2px;
@@ -41,7 +41,7 @@ h1 {
     font-family: 'LuxuriousScript', sans-serif;
     font-size: 70px;
     font-weight: 300;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         font-size: 45px;
         margin: 16px auto 0;
     }
@@ -50,7 +50,7 @@ h1 {
 .textInvite {
     margin: 4px auto 0 auto;
     font-size: 14.5px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         width: 345px;
         font-size: 9.3px;
         text-align: center;
@@ -62,7 +62,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         margin: 13px auto 11px;
     }
 }
@@ -79,7 +79,7 @@ h1 {
     display: flex;
     align-items: center;
     font-size: 17px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         margin-right: 12px;
         font-size: 0.6rem;
     }
@@ -90,7 +90,7 @@ h1 {
     display: flex;
     align-items: center;
     font-size: 17px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         margin-left: 12px;
         font-size: 0.6rem;
     }
@@ -102,21 +102,21 @@ h1 {
     height: 45px;
     margin-top: auto;
     margin-bottom: auto;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         height: 27px;
     }
 }
   
 #s1 {
     margin-right: 10px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         margin-right: 8px;
     }
 }
   
 #s2 {
     margin-left: 10px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         margin-left: 8px;
     }
 }
@@ -124,7 +124,7 @@ h1 {
 .dateMes {
     font-size: 18px;  
     margin-bottom: 7px; 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         font-size: 0.75rem;
         margin-bottom: 5px;
     }
@@ -132,7 +132,7 @@ h1 {
   
 .dateDia {
     font-size: 40px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         font-size: 1.6rem;
     }
 }
@@ -140,7 +140,7 @@ h1 {
 .dateAno {
     font-size: 18px;
     margin-top: 7px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         font-size: 0.75rem;
         margin-top: 5px;
     }
@@ -148,7 +148,7 @@ h1 {
 
 .place {
     font-size: 15px;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 768px) {
         font-size: 0.582rem;
     }
 }
