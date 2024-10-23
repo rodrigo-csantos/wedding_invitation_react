@@ -1,4 +1,5 @@
 import './cardFront.css'
+import img from '/rodrigo_karina-brasao.png'
 import { stateProp } from '../../../interfaces/interface'
 
 function CardFront ({ state }: stateProp): JSX.Element {
@@ -6,7 +7,7 @@ function CardFront ({ state }: stateProp): JSX.Element {
         <>
             <div className={state? 'Close' : 'Open'} id="cardFront">
                 <div className="imgLogo">
-                    <img className="logoKR" src="/rodrigo_karina-brasao.png" alt="Brasão Rodrigo e Karina" />
+                    <img className="logoKR" src={img} alt="Brasão Rodrigo e Karina" />
                 </div>
             </div>
         </>

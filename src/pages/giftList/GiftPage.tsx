@@ -1,4 +1,5 @@
 import './giftPage.css'
+import img from '/rodrigo_karina-brasao.png'
 import {giftImagesPaths, renderGift} from '../../assets/giftImages/giftImagesPaths'
 import Gift from './Gift'
 import {useEffect, useState } from 'react'
@@ -27,7 +28,7 @@ function GiftPage (): JSX.Element {
         <div id='giftPage'>
             <div className="fixed-bg"></div>
             <section className="cabecalho">
-                <img className="img" src="/rodrigo_karina-brasao.png" alt="Brasão Rodrigo e Karina" />
+                <img className="img" src={img} alt="Brasão Rodrigo e Karina" />
                 <h1 id='h1Lista'>Nossa lista de casamento</h1>
                 <p className="introducao">
                     Querido(a) convidado(a), seja bem-vindo(a) à nossa lista de presentes. 

@@ -10,7 +10,7 @@ function App() {
     <>
       <Routes>
         <Route path='/wedding_invitation_react' element={ <Home/> } />
-        <Route path='/gifts' element={ <GiftPage />} />
+        <Route path='/wedding_invitation_react/gifts' element={ <GiftPage />} />
       </Routes>
     </>
   )

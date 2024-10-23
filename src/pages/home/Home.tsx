@@ -49,7 +49,7 @@ function Home (): JSX.Element  {
                     <Button img1={imagePaths.button2.img1} img2={imagePaths.button2.img2} alt1="Texto: Confirmar preseça" alt2="ícone do whatsapp" showComponent={opening}/>
                 </a>
                 
-                < Link to={'/gifts'} onClick={handleChangeHeight}>
+                < Link to={'/wedding_invitation_react/gifts'} onClick={handleChangeHeight}>
                     <Button img1={imagePaths.button3.img1} img2={imagePaths.button3.img2} alt1="Texto: Lista de presentes" alt2="ícone de presentes" showComponent={opening}/>
                 </Link>
            </div>}
