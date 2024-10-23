@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={ <Home/> } />
+        <Route path='/wedding_invitation_react' element={ <Home/> } />
         <Route path='/gifts' element={ <GiftPage />} />
       </Routes>
     </>
